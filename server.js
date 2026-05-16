@@ -59,8 +59,13 @@ app.get("/check-key", (req, res) => {
 app.use(errorHandler);
 
 // Server
-const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`🤖 NexaBot Backend running on port ${PORT}`);
 });
+// const PORT = process.env.PORT || 5000;
+
+// app.listen(PORT, () => {
+//   console.log(`🤖 NexaBot Backend running on port ${PORT}`);
+// });
